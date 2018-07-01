@@ -3,6 +3,8 @@ import cv2
 import numpy as np
 from collections import deque
 
+sys.stderr = object     # don't print errors to command line
+
 cam = cv2.VideoCapture(0)
 haar_face_cascade = cv2.CascadeClassifier('/usr/local/bin/opencv/data/haarcascades/haarcascade_frontalface_alt.xml')
 haar_eye_cascade = cv2.CascadeClassifier('/usr/local/bin/opencv/data/haarcascades/haarcascade_eye.xml')
